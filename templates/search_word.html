@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado de Busqueda</title>
+</head>
+<body>
+    <h1>Resultado de Busqueda</h1>
+    {% if palabras %}
+        <table>
+            <tr>
+                <th>Palabra</th>
+                <th>Significado</th>
+            </tr>
+            {% for palabra in palabras %}
+                <tr>
+                    <td>{{ palabra[0] }}</td>
+                    <td>{{ palabra[1] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Volver a inicio</a>
+    {% else %}
+        <p>No se encontraron resultados.</p>
+    <a href="{{ url_for('home') }}" class="btn btn-primary">Volver a inicio</a>
+    {% endif %}
+</body>
+</html>

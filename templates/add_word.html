@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Palabra</title>
+</head>
+<body>
+    <h1>Agregue nueva palabra</h1>
+    <form method="post" action="/add_word">
+        <label for="palabra">Palabra:</label>
+        <input type="text" id="palabra" name="palabra"><br><br>
+        <label for="significado">Significado:</label>
+        <input type="text" id="significado" name="significado"><br><br>
+        <input type="submit" value="Agregar">
+    </form>
+<a href="{{ url_for('home') }}" class="btn btn-primary">Volver a inicio</a>
+</body>
+</html>
